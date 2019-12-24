@@ -9,9 +9,9 @@
 
 
 
-HDC			hDC = NULL;		// Private GDI Device Context
+HDC         hDC = NULL;		// Private GDI Device Context
 HGLRC		hRC = NULL;		// Permanent Rendering Context
-HWND		hWnd = NULL;		// Holds Our Window Handle
+HWND		hWnd = NULL;	// Holds Our Window Handle
 HINSTANCE	hInstance;		// Holds The Instance Of The Application
 
 bool	keys[256];			// Array Used For The Keyboard Routine
@@ -480,9 +480,9 @@ LRESULT CALLBACK WndProc(HWND	hWnd,			// Handle For This Window
 }
 
 int WINAPI WinMain(HINSTANCE	hInstance,			// Instance
-    HINSTANCE	hPrevInstance,		// Previous Instance
-    LPSTR		lpCmdLine,			// Command Line Parameters
-    int			nCmdShow)			// Window Show State
+    HINSTANCE	hPrevInstance,		                // Previous Instance
+    LPSTR		lpCmdLine,			                // Command Line Parameters
+    int			nCmdShow)			                // Window Show State
 {
     MSG		msg;									// Windows Message Structure
     BOOL	done = FALSE;								// Bool Variable To Exit Loop
@@ -562,7 +562,7 @@ int WINAPI WinMain(HINSTANCE	hInstance,			// Instance
                 KillGLWindow();						// Kill Our Current Window
                 fullscreen = !fullscreen;				// Toggle Fullscreen / Windowed Mode
                 // Recreate Our OpenGL Window
-                if (!CreateGLWindow(_T("LinFuong & NeHe's Rebus List Tutorial"), 1366, 768, 32, fullscreen))
+                if (!CreateGLWindow(_T("LinFuong & NeHe's Object Drag'n'Drop Tutorial"), 1366, 768, 32, fullscreen))
                 {
                     return 0;						// Quit If Window Was Not Created
                 }
