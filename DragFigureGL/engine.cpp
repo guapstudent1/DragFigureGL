@@ -12,73 +12,73 @@ extern GLuint memlist;
 
 void InitFigurePos(SCENE_ELEMENT sc[], int ncount)
 {
-	float r = 0.9f * 4;
-	float xstart = -r;
-	float ystart = -r;
+    float r = 0.9f * 4;
+    float xstart = -r;
+    float ystart = -r;
 
-	for (int i = 0; i < ncount; i++) {
-		float theta = 2.0f * 3.1415926f * i / ncount;
-		
-		sc[i].xpos = xstart + r * cosf(theta);
-		sc[i].ypos = ystart + r * sinf(theta);
-	}
-	
+    for (int i = 0; i < ncount; i++) {
+        float theta = 2.0f * 3.1415926f * i / ncount;
+
+        sc[i].xpos = xstart + r * cosf(theta);
+        sc[i].ypos = ystart + r * sinf(theta);
+    }
+
 }
 
-GLvoid BuildLists()     //создаем список отображени€
+GLvoid BuildLists()						// Create view list
 {
-	memlist = glGenLists(1);      //создаем два списка
+    memlist = glGenLists(1);			// Create one list
 
-	glNewList(memlist, GL_COMPILE);      // Ќовый откомпилированный список отображени€ box
-	
-	FillCircle(0.5f);
-	DrawCircle(0.9f);
-	DrawCircle(1.4f);
+    glNewList(memlist, GL_COMPILE);     // New compiled view list box
 
-	glEndList();	
+    FillCircle(0.5f);
+    DrawCircle(0.9f);
+    DrawCircle(1.4f);
+
+    glEndList();
 }
-void DrawCircle(GLfloat r) 
+void DrawCircle(GLfloat r)
 {
-	int num_segments = 100;
-	glColor3f(0.1f, 0.1f, 0.4f);
-	glBegin(GL_LINE_LOOP);	
-	for (int i = 0; i < num_segments; i++) {
-		float theta = 2.0f * 3.1415926f * float(i) / float(num_segments);//get the current angle 
-		float x = r * cosf(theta);//calculate the x component 
-		float y = r * sinf(theta);//calculate the y component 
-		glVertex2f(x, y);//output vertex 
-	}
-	glEnd();
+    int num_segments = 100;
+    glColor3f(0.1f, 0.1f, 0.4f);
+    glBegin(GL_LINE_LOOP);
+    for (int i = 0; i < num_segments; i++) {
+        float theta = 2.0f * 3.1415926f * float(i) / float(num_segments);	//Get the current angle 
+        float x = r * cosf(theta);	// Calculate the x component 
+        float y = r * sinf(theta);	// Calculate the y component 
+        glVertex2f(x, y);			// Output vertex 
+    }
+    glEnd();
 }
 
 void FillCircle(GLfloat r)
 {
-	int num_segments = 100;
-	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-	
-	glBegin(GL_POLYGON);
-	
-	for (int i = 0; i < num_segments; i++) {
-		float theta = 2.0f * 3.1415926f * float(i) / float(num_segments);//get the current angle 
-		float x = r * cosf(theta);//calculate the x component 
-		float y = r * sinf(theta);//calculate the y component 
-		glVertex2f(x, y);//output vertex 
-	}
-	glEnd();
+    int num_segments = 100;
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+
+    glBegin(GL_POLYGON);
+
+    for (int i = 0; i < num_segments; i++) {
+        float theta = 2.0f * 3.1415926f * float(i) / float(num_segments);	// Get the current angle 
+        float x = r * cosf(theta);	// Calculate the x component 
+        float y = r * sinf(theta);	// Calculate the y component 
+        glVertex2f(x, y);			// Output vertex 
+    }
+    glEnd();
 }
 
 
 void DrawPoint()
 {
-	float r = 0.04f / xyzoom;
-	int num_segments = 50;
+    float r = 0.04f / xyzoom;
+    int num_segments = 50;
 
-	glBegin(GL_POLYGON);
-	for (int i = 0; i < num_segments; i++) {
-		float theta = 2.0f * 3.1415926f * float(i) / float(num_segments);//get the current angle 
-		float x = r * cosf(theta);//calculate the x component 
-		float y = r * sinf(theta);//calculate the y component 
-		glVertex2f(x, y);//output vertex 
-	}
-	glEnd();
+    glBegin(GL_POLYGON);
+    for (int i = 0; i < num_segments; i++) {
+        float theta = 2.0f * 3.1415926f * float(i) / float(num_segments);	// Get the current angle 
+        float x = r * cosf(theta);	// Calculate the x component 
+        float y = r * sinf(theta);	// Calculate the y component 
+        glVertex2f(x, y);			// Output vertex 
+    }
+    glEnd();
 }
