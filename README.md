@@ -12,4 +12,4 @@ Object at start:
 
 
 Now you can use mouse to click and activate the object (look like some Atom) to drag them to Molecula
-![](space_reorder.png)
+![](space_reordering.png)
