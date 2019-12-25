@@ -13,6 +13,6 @@ Objects at program start:
 
 
 Now you can use mouse to click and activate the object (look like an Atom) 
-to group them in Molecula
+to group them into Molecula
 
 ![](space_reordering.png)
