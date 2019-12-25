@@ -2,6 +2,11 @@
 OpenGL Object Drag &amp; Drop
 
 Use Visual Studio 2019 to compile and test
+## Controls
+
+F1 - switch from fullscreen to windowed
+Arrows - move camera
+PageUp, PageDown - zooming
 
 ## Enjoy!
 
