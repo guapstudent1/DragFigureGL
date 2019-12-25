@@ -1,6 +1,7 @@
 # Paths
 .vs
 Debug/
+Release/
 
 # Prerequisites
 *.d

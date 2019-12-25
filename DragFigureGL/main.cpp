@@ -60,7 +60,7 @@ int InitGL(GLvoid)										// All Setup For OpenGL Goes Here
     }*/
 
     glShadeModel(GL_SMOOTH);							// Enable Smooth Shading
-    glClearColor(0.0f, 0.0f, 0.0f, 0.5f);				// Black Background
+    glClearColor(1.0f, 1.0f, 1.0f, 0.5f);				// Black Background
     glClearDepth(1.0f);									// Depth Buffer Setup
     glEnable(GL_DEPTH_TEST);							// Enables Depth Testing
     glDepthFunc(GL_LEQUAL);								// The Type Of Depth Testing To Do
@@ -126,9 +126,9 @@ GLvoid KillGLWindow(GLvoid)								// Properly Kill The Window
     }
 
     if (hDC && !ReleaseDC(hWnd, hDC))					// Are We Able To Release The DC
-    {
         MessageBox(NULL, _T("Release Device Context Failed."), _T("SHUTDOWN ERROR"), MB_OK | MB_ICONINFORMATION);
         hDC = NULL;										// Set DC To NULL
+    {
     }
 
     if (hWnd && !DestroyWindow(hWnd))					// Are We Able To Destroy The Window?
