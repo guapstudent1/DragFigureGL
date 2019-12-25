@@ -8,8 +8,12 @@ Enjoy!
 
 Object at start:
 
+
 ![](initial_order.png)
 
 
-Now you can use mouse to click and activate the object (look like some Atom) to drag them to Molecula
+Now you can use mouse to click and activate the object (look like some Atom) 
+to drag them to Molecula
+
+
 ![](space_reordering.png)
